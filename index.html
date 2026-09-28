@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prunelle — Confidentialité</title>
+<meta name="description" content="Politique de confidentialité de l'application Prunelle : aucune donnée ne quitte ton iPhone.">
+<style>
+:root{
+--bg:#111512; --surface:#1A231D; --ink:#ECF2ED; --sec:#9DAEA3; --ter:#7A8A80;
+--sep:#2C3A32; --mint:#6FD3A6; --coral:#F2695C;
+}
+@media (prefers-color-scheme: light){
+:root:not([data-theme="dark"]){
+--bg:#F7FAF8; --surface:#FFFFFF; --ink:#131A15; --sec:#4A5A50; --ter:#6B7A70;
+--sep:#DCE6E0; --mint:#2E9C6E; --coral:#D2472F;
+}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+background:var(--bg); color:var(--ink);
+font:400 17px/1.65 -apple-system,"SF Pro Text",system-ui,"Segoe UI",sans-serif;
+padding:0 16px 80px;
+}
+.wrap{max-width:660px;margin:0 auto}
+header{padding:56px 0 8px;border-bottom:1px solid var(--sep);margin-bottom:36px}
+.mark{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.mark svg{display:block}
+.mark span{font-weight:700;letter-spacing:-.2px;font-size:17px}
+h1{font-size:clamp(28px,7vw,38px);line-height:1.15;font-weight:800;letter-spacing:-.8px;margin-bottom:12px}
+.lede{color:var(--sec);font-size:18px;margin-bottom:28px}
+.date{color:var(--ter);font-size:14px;margin-bottom:8px}
+h2{font-size:21px;font-weight:700;letter-spacing:-.3px;margin:40px 0 12px}
+h3{font-size:17px;font-weight:700;margin:24px 0 8px}
+p{margin-bottom:14px}
+ul{margin:0 0 16px 20px}
+li{margin-bottom:8px}
+strong{font-weight:650}
+a{color:var(--mint)}
+.card{
+background:var(--surface);border:1px solid var(--sep);border-radius:18px;
+padding:22px 22px 8px;margin:28px 0;
+}
+.card p:last-child{margin-bottom:14px}
+.key{
+border-left:3px solid var(--coral);padding-left:16px;margin:28px 0;
+font-size:19px;line-height:1.5;
+}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:15px}
+th,td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--sep);vertical-align:top}
+th{color:var(--ter);font-weight:650;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+td:first-child{width:38%;font-weight:600}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--sep);color:var(--ter);font-size:14px}
+.en{margin-top:64px;padding-top:40px;border-top:1px solid var(--sep)}
+.en h2:first-of-type{margin-top:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="mark">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="1.8">
+<path d="M1.8 12S5.4 5.6 12 5.6 22.2 12 22.2 12 18.6 18.4 12 18.4 1.8 12 1.8 12Z" fill="var(--mint)" stroke="none"/>
+<circle cx="12" cy="12" r="2.7" fill="var(--bg)" stroke="none"/>
+</svg>
+<span>Prunelle</span>
+</div>
+<h1>Confidentialité</h1>
+<p class="lede">Ce que Prunelle sait de toi, et où ça va.</p>
+<p class="date">Dernière mise à jour : 28 septembre 2026</p>
+</header>
+
+<div class="key">
+Prunelle n'a pas de serveur. Je ne reçois aucune de tes données — ni tes séances, ni ton visage, ni ton nom. Il n'y a rien à recevoir : tout reste sur ton iPhone.
+</div>
+
+<h2>Ce que l'app enregistre</h2>
+<p>
+Uniquement ce qui est nécessaire pour afficher ta progression : pour chaque séance, l'exercice effectué, la date et l'heure, la durée, si tu es allé au bout, le confort que tu as indiqué, et ton temps de réaction moyen quand l'exercice en mesure un.
+</p>
+<p>
+Ces informations sont enregistrées <strong>sur ton appareil, et nulle part ailleurs</strong>. Elles ne partent sur aucun serveur et ne sont pas synchronisées avec iCloud. Le revers est réel et il faut le dire : si tu changes d'iPhone ou si tu supprimes l'app, ton historique ne te suit pas.
+</p>
+
+<h2>La caméra</h2>
+<p>
+Certains exercices utilisent la caméra avant pour vérifier que tu es bien placé : à bonne distance, la tête stable, le regard au bon endroit, les yeux ouverts ou fermés selon la consigne.
+</p>
+
+<div class="card">
+<h3>Trois choses à savoir</h3>
+<ul>
+<li><strong>Aucune image n'est enregistrée.</strong> Pas de photo, pas de vidéo, pas de capture. Rien n'est écrit sur le disque.</li>
+<li><strong>Aucune image n'est transmise.</strong> L'analyse se fait en temps réel dans la mémoire de ton iPhone, image par image, et chaque image est aussitôt oubliée.</li>
+<li><strong>L'app ne lit que des mesures.</strong> Des distances et des angles — pas ton visage. Elle ne cherche pas à te reconnaître, ne sait pas à quoi tu ressembles, et ne conserve aucune empreinte biométrique.</li>
+</ul>
+<p>
+Cette analyse repose sur ARKit, une technologie d'Apple intégrée à iOS, qui fonctionne entièrement sur l'appareil.
+</p>
+</div>
+
+<p>
+La caméra est facultative. Tu peux refuser l'autorisation, ou la retirer à tout moment dans Réglages → Prunelle. Les exercices qui n'en ont pas besoin continuent de fonctionner normalement.
+</p>
+<h2>Ce que l'app ne fait pas</h2>
+<ul>
+<li>Aucun compte, aucune inscription, aucune adresse e-mail demandée.</li>
+<li>Aucun outil d'analyse d'audience, aucun SDK tiers, aucune publicité.</li>
+<li>Aucun suivi publicitaire, ni entre applications, ni entre sites.</li>
+<li>Aucune donnée vendue, louée ou partagée avec qui que ce soit.</li>
+<li>Aucune localisation, aucun accès à tes contacts, ta galerie ou ton micro.</li>
+</ul>
+
+<h2>Les notifications</h2>
+<p>
+Les rappels sont programmés localement par ton iPhone. Aucun serveur n'est impliqué, et rien n'indique à qui que ce soit quand tu ouvres l'app. Tu peux les couper dans Réglages → Rappels.
+</p>
+
+<h2>L'achat</h2>
+<p>
+Prunelle Pro est un achat unique, vendu par Apple et non par moi. Il n'y a pas d'abonnement et rien ne se renouvelle. Le paiement et la facturation sont gérés par l'App Store : je ne vois ni ton numéro de carte, ni ton nom, ni ton adresse. L'app apprend seulement d'Apple si l'achat a été fait ou non. La politique de confidentialité d'Apple s'applique à cette partie.
+</p>
+
+<h2>Tes données, tes droits</h2>
+<p>
+Le RGPD te donne un droit d'accès, de rectification et d'effacement. Comme tout est chez toi, tu l'exerces directement, sans passer par moi :
+</p>
+<table>
+<tr><th>Ce que tu veux</th><th>Comment faire</th></tr>
+<tr><td>Tout effacer</td><td>Supprime l'app. Les données locales partent avec elle.</td></tr>
+<tr><td>Retirer la caméra</td><td>Réglages → Prunelle → Appareil photo.</td></tr>
+</table>
+<p>
+Je ne peux pas effacer tes données à ta place, pour la même raison que je ne peux pas les lire : je n'y ai pas accès.
+</p>
+
+<h2>Les enfants</h2>
+<p>
+Prunelle n'est pas destinée aux enfants de moins de 13 ans et ne collecte sciemment aucune donnée les concernant.
+</p>
+
+<h2>Ce n'est pas un dispositif médical</h2>
+<p>
+Prunelle est une application de bien-être. Elle propose des pauses et des exercices de confort visuel. Elle ne diagnostique rien, ne soigne rien, et ne remplace pas l'avis d'un ophtalmologiste ou d'un orthoptiste. Ce que l'app mesure, ce sont tes performances <em>dans l'app</em> — jamais ta vue.
+</p>
+
+<h2>Si cette page change</h2>
+<p>
+Toute modification sera publiée ici, avec une nouvelle date en haut de page. Si un changement devait un jour élargir ce qui est collecté, il serait annoncé dans l'application avant d'entrer en vigueur.
+</p>
+
+<h2>Me contacter</h2>
+<p>
+Une question, un doute, une erreur dans cette page : <a href="mailto:karnisalaheddine@gmail.com">karnisalaheddine@gmail.com</a>.
+</p>
+<section class="en" lang="en">
+<h2>English</h2>
+<p>
+<strong>Prunelle has no server.</strong> I receive none of your data — not your sessions, not your face, not your name. There is nothing to receive: everything stays on your iPhone.
+</p>
+<p>
+<strong>What is stored.</strong> For each session: the exercise, date and time, duration, whether you finished, the comfort rating you gave, and your average reaction time where an exercise measures one. It is saved on your device and nowhere else — no server, no iCloud sync. The trade-off is real: change iPhone or delete the app, and your history does not follow.
+</p>
+<p>
+<strong>The camera.</strong> Some exercises use the front camera to check your distance, head steadiness, gaze direction and whether your eyes are open. No image is ever recorded, stored or transmitted: frames are analysed in memory in real time and immediately discarded. The app reads distances and angles, not your face, and keeps no biometric template. This runs on Apple's ARKit, entirely on device. The camera is optional and can be revoked in Settings → Prunelle.
+</p>
+<p>
+<strong>What the app does not do.</strong> No account, no analytics, no third-party SDKs, no advertising, no tracking, no data sold or shared, no location, contacts, photos or microphone access. Reminders are scheduled locally by your iPhone.
+</p>
+<p>
+<strong>The purchase.</strong> Prunelle Pro is a one-time purchase — no subscription, nothing renews. It is sold and billed by Apple; I never see your card, name or address, only whether the purchase was made.
+</p>
+<p>
+<strong>Your rights.</strong> Deleting the app erases everything it stored. I cannot delete your data for you, for the same reason I cannot read it.
+</p>
+<p>
+<strong>Not a medical device.</strong> Prunelle is a wellness app. It does not diagnose or treat anything and does not replace an eye-care professional. It measures your performance <em>inside the app</em> — never your eyesight.
+</p>
+<p>Questions: <a href="mailto:karnisalaheddine@gmail.com">karnisalaheddine@gmail.com</a></p>
+</section>
+
+<footer>
+Prunelle — Salah Karni · Dernière mise à jour le 28 septembre 2026
+</footer>
+
+</div>
+</body>
+</html>
