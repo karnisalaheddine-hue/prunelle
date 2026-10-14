@@ -68,7 +68,7 @@ footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--sep);color:va
 </div>
 <h1>Confidentialité</h1>
 <p class="lede">Ce que EyePause sait de toi, et où ça va.</p>
-<p class="date">Dernière mise à jour : 28 septembre 2026</p>
+<p class="date">Dernière mise à jour : 14 octobre 2026</p>
 </header>
 
 <div class="key">
@@ -77,7 +77,7 @@ EyePause n'a pas de serveur. Je ne reçois aucune de tes données — ni tes sé
 
 <h2>Ce que l'app enregistre</h2>
 <p>
-Uniquement ce qui est nécessaire pour afficher ta progression : pour chaque séance, l'exercice effectué, la date et l'heure, la durée, si tu es allé au bout, le confort que tu as indiqué, et ton temps de réaction moyen quand l'exercice en mesure un.
+Uniquement ce qui est nécessaire pour afficher ta progression : pour chaque séance, l'exercice effectué, la date et l'heure, la durée, si tu es allé au bout, le confort que tu as indiqué, ton temps de réaction moyen quand l'exercice en mesure un, et — pour le seul exercice « Approche » — la distance la plus courte (en centimètres) à laquelle tu as tenu le téléphone. Un indicateur oui/non note aussi si la caméra a servi pendant la séance.
 </p>
 <p>
 Ces informations sont enregistrées <strong>sur ton appareil, et nulle part ailleurs</strong>. Elles ne partent sur aucun serveur et ne sont pas synchronisées avec iCloud. Le revers est réel et il faut le dire : si tu changes d'iPhone ou si tu supprimes l'app, ton historique ne te suit pas.
@@ -93,7 +93,7 @@ Certains exercices utilisent la caméra avant pour vérifier que tu es bien plac
 <ul>
 <li><strong>Aucune image n'est enregistrée.</strong> Pas de photo, pas de vidéo, pas de capture. Rien n'est écrit sur le disque.</li>
 <li><strong>Aucune image n'est transmise.</strong> L'analyse se fait en temps réel dans la mémoire de ton iPhone, image par image, et chaque image est aussitôt oubliée.</li>
-<li><strong>L'app ne lit que des mesures.</strong> Des distances et des angles — pas ton visage. Elle ne cherche pas à te reconnaître, ne sait pas à quoi tu ressembles, et ne conserve aucune empreinte biométrique.</li>
+<li><strong>L'app lit des mesures, pas des images.</strong> Des distances et des angles calculés par ARKit à partir de ton visage. Elle ne cherche pas à te reconnaître, ne sait pas à quoi tu ressembles, et ne conserve aucune empreinte biométrique. Le détail exact est juste en dessous.</li>
 </ul>
 <p>
 Cette analyse repose sur ARKit, une technologie d'Apple intégrée à iOS, qui fonctionne entièrement sur l'appareil.
@@ -103,6 +103,22 @@ Cette analyse repose sur ARKit, une technologie d'Apple intégrée à iOS, qui f
 <p>
 La caméra est facultative. Tu peux refuser l'autorisation, ou la retirer à tout moment dans Réglages → EyePause. Les exercices qui n'en ont pas besoin continuent de fonctionner normalement.
 </p>
+
+<h2 id="donnees-visage">Données du visage (caméra TrueDepth / ARKit)</h2>
+<p>
+Les exercices qui utilisent la caméra s'appuient sur le suivi du visage d'ARKit, qui utilise la caméra TrueDepth de ton iPhone. Voici exactement ce que EyePause fait de ces données.
+</p>
+<table>
+<tr><th>Question</th><th>Réponse</th></tr>
+<tr><td>Quelles données du visage sont lues</td><td>Uniquement, image par image : la distance entre ton visage et l'écran ; l'orientation de ta tête (pour savoir si elle reste stable) ; l'ouverture de chaque paupière (yeux ouverts ou fermés) ; la direction de chaque œil (pour savoir où tu regardes et si tes yeux convergent). Aucune photo, aucune vidéo, aucun maillage 3D du visage, aucune carte de profondeur n'est enregistré.</td></tr>
+<tr><td>À quoi elles servent</td><td>Uniquement à guider l'exercice en cours, en temps réel : te dire si tu es trop près ou trop loin, si ta tête bouge, si tu regardes au bon endroit, si tes yeux sont ouverts ou fermés selon la consigne. Rien d'autre.</td></tr>
+<tr><td>Où elles sont traitées et stockées</td><td>Sur ton iPhone uniquement, dans sa mémoire vive. Les mesures brutes ne sont jamais écrites sur le disque. Une seule valeur dérivée est conservée : pour l'exercice « Approche », la distance la plus courte tenue pendant au moins une seconde (un nombre en centimètres), enregistrée dans l'historique local de l'app. Elle n'est ni envoyée sur un serveur ni synchronisée avec iCloud.</td></tr>
+<tr><td>Combien de temps elles sont conservées</td><td>Les mesures brutes : le temps d'une image (environ 1/60 de seconde), plus une fenêtre glissante d'environ une seconde et demie en mémoire pour lisser les calculs. Tout est effacé à la fin de l'exercice. La distance la plus courte de l'exercice « Approche » reste dans l'historique local jusqu'à ce que tu supprimes l'app.</td></tr>
+<tr><td>Partage</td><td>Aucun. Les données du visage ne sont transmises à personne : ni à moi, ni à un tiers, ni à un service d'analyse ou de publicité. L'app n'a pas de serveur.</td></tr>
+<tr><td>Ce qu'elles ne servent jamais à faire</td><td>Pas de publicité ni de marketing, pas d'identification ni d'authentification, pas de profilage, pas de vente, pas d'entraînement de modèles. Elles ne servent pas non plus à évaluer ta vue.</td></tr>
+<tr><td>Ton contrôle</td><td>La caméra n'est activée qu'avec ton autorisation, et seulement pendant un exercice qui en a besoin. Tu peux la refuser ou la retirer dans Réglages → EyePause → Appareil photo ; les autres exercices continuent de fonctionner. Supprimer l'app efface aussi la valeur conservée.</td></tr>
+</table>
+
 <h2>Ce que l'app ne fait pas</h2>
 <ul>
 <li>Aucun compte, aucune inscription, aucune adresse e-mail demandée.</li>
@@ -160,11 +176,23 @@ Une question, un doute, une erreur dans cette page : <a href="mailto:karnisalahe
 <strong>EyePause has no server.</strong> I receive none of your data — not your sessions, not your face, not your name. There is nothing to receive: everything stays on your iPhone.
 </p>
 <p>
-<strong>What is stored.</strong> For each session: the exercise, date and time, duration, whether you finished, the comfort rating you gave, and your average reaction time where an exercise measures one. It is saved on your device and nowhere else — no server, no iCloud sync. The trade-off is real: change iPhone or delete the app, and your history does not follow.
+<strong>What is stored.</strong> For each session: the exercise, date and time, duration, whether you finished, the comfort rating you gave, your average reaction time where an exercise measures one, and — for the "Approach" exercise only — the closest distance (in centimetres) at which you held the phone, plus a yes/no flag recording whether the camera was used. It is saved on your device and nowhere else — no server, no iCloud sync. The trade-off is real: change iPhone or delete the app, and your history does not follow.
 </p>
 <p>
 <strong>The camera.</strong> Some exercises use the front camera to check your distance, head steadiness, gaze direction and whether your eyes are open. No image is ever recorded, stored or transmitted: frames are analysed in memory in real time and immediately discarded. The app reads distances and angles, not your face, and keeps no biometric template. This runs on Apple's ARKit, entirely on device. The camera is optional and can be revoked in Settings → EyePause.
 </p>
+
+<p id="face-data"><strong>Face data (TrueDepth camera / ARKit).</strong> Camera exercises use ARKit face tracking, which relies on the TrueDepth camera.</p>
+<ul>
+<li><strong>What is read:</strong> frame by frame, only the distance between your face and the screen, your head orientation (to check it stays steady), how open each eyelid is, and the direction of each eye (gaze and convergence). No photo, video, 3D face mesh or depth map is ever saved.</li>
+<li><strong>Why:</strong> solely to guide the exercise in progress in real time — too close or too far, head moving, looking at the right spot, eyes open or closed as instructed.</li>
+<li><strong>Where it is processed and stored:</strong> on your iPhone only, in memory. Raw measurements are never written to disk. One derived value is kept: for the "Approach" exercise, the closest distance held for at least one second (a number in centimetres), saved in the app's local history. It is never sent to a server or synced to iCloud.</li>
+<li><strong>How long it is kept:</strong> raw measurements last one frame (about 1/60 s), plus a rolling window of about 1.5 seconds in memory for smoothing; everything is discarded when the exercise ends. The "Approach" closest distance stays in the local history until you delete the app.</li>
+<li><strong>Sharing:</strong> none. Face data is never shared with me, with any third party, or with any analytics or advertising service. The app has no server.</li>
+<li><strong>Never used for:</strong> advertising or marketing, identification or authentication, profiling, sale, or model training. It is not used to assess your eyesight.</li>
+<li><strong>Your control:</strong> the camera only runs with your permission and only during an exercise that needs it. Revoke it any time in Settings → EyePause → Camera; the other exercises keep working. Deleting the app also erases the stored value.</li>
+</ul>
+
 <p>
 <strong>What the app does not do.</strong> No account, no analytics, no third-party SDKs, no advertising, no tracking, no data sold or shared, no location, contacts, photos or microphone access. Reminders are scheduled locally by your iPhone.
 </p>
@@ -181,7 +209,7 @@ Une question, un doute, une erreur dans cette page : <a href="mailto:karnisalahe
 </section>
 
 <footer>
-EyePause — Salah Karni · Dernière mise à jour le 28 septembre 2026
+EyePause — Salah Karni · Dernière mise à jour le 14 octobre 2026
 </footer>
 
 </div>
